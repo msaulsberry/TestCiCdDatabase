@@ -1,0 +1,10 @@
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\bin\Debug\TestCiCdDatabase.dacpac
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\bin\Debug\TestCiCdDatabase.dll
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\bin\Debug\TestCiCdDatabase.pdb
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\TestCiCdDatabase.sqlproj.AssemblyReference.cache
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\Model.xml
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\refactor.xml
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\postdeploy.sql
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\predeploy.sql
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\TestCiCdDatabase.dll
+C:\Users\Mitchell\testProjects\TestCiCdDatabase\TestCiCdDatabase\obj\Debug\TestCiCdDatabase.pdb
