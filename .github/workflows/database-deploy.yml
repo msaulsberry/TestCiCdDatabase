@@ -52,7 +52,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - uses: azure/sql-action@v1
       with:        
-        server-name: mitch-sql-test
+        server-name: mitch-sql-test.database.windows.net
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
         dacpac-package: TestCiCdDatabase.dacpac
     
