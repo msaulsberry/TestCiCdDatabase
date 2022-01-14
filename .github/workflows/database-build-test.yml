@@ -32,4 +32,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: TestCiCdDatabase
-          path: ${{ github.workspace }}/bin/Release/ 
+          path: ${{ github.workspace }}\TestCiCdDatabase\bin\Release\
+          if-no-found-files: error
+          retention-days: 15
