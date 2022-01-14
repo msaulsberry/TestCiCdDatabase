@@ -35,3 +35,24 @@ jobs:
           path: ${{ github.workspace }}\TestCiCdDatabase\bin\Release\
           if-no-files-found: error
           retention-days: 15
+          
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Download Build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: TestCiCdDatabase
+          
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: azure/sql-action@v1
+      with:        
+        server-name: mitch-sql-test
+        connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+        dacpac-package: TestCiCdDatabase.dacpac
+    
