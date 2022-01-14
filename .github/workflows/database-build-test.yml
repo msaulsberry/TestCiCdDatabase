@@ -33,5 +33,5 @@ jobs:
         with:
           name: TestCiCdDatabase
           path: ${{ github.workspace }}\TestCiCdDatabase\bin\Release\
-          if-no-found-files: error
+          if-no-files-found: error
           retention-days: 15
