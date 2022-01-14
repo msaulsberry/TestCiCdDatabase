@@ -26,7 +26,7 @@ jobs:
       # Create DACPAC using MsBuild
       - name: Build DACPAC for Database Project
         run: |
-          msbuild.exe 'Create dacpac from TestCiCdDatabase.sqlproj' /p:Configuration=Release
+          msbuild.exe TestCiCdDatabase/TestCiCdDatabase.sqlproj /p:Configuration=Release
           
       # Publish artifact containing the contents of the Build results folder
       - uses: actions/upload-artifact@v2
