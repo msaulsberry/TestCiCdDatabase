@@ -1,0 +1,35 @@
+name: Database-Build-Test
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow pull request opened against main branch
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Build database project
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Add MsBuild to Path
+        uses: microsoft/setup-msbuild@v1.1
+
+      # Create DACPAC using MsBuild
+      - name: Build DACPAC for Database Project
+        run: |
+          msbuild.exe 'Create dacpac from TestCiCdDatabase.sqlproj' /p:Configuration=Release
+          
+      # Publish artifact containing the contents of the Build results folder
+      - uses: actions/upload-artifact@v2
+        with:
+          name: TestCiCdDatabase
+          path: ${{ github.workspace }}/bin/Release/ 
