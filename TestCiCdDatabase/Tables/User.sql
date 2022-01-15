@@ -5,5 +5,5 @@
     [First] NVARCHAR(256) NOT NULL, 
     [Middle] NVARCHAR(256) NULL, 
     [Last] NCHAR(256) NOT NULL, 
-    [CompanyTest] NVARCHAR(MAX) NULL
+    [Company] NVARCHAR(MAX) NULL
 )
